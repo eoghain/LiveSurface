@@ -15,14 +15,11 @@ struct ImageCell: View {
     var body: some View {
         VStack {
             LSImageView(imageLoader: ImageLoaderCache.shared.loaderFor(path: "https://www.livesurface.com/test/images/\(image.image)"))
-            HStack {
-                Text(image.name)
-                Text(image.image)
-            }
+                .aspectRatio(0.75, contentMode: .fit)
+                .frame(width: size.width, height: size.height)
+            ImageMetadataView(image: image)
         }
         .animation(.default)
-        .aspectRatio(0.75, contentMode: .fit)
-        .frame(width: size.width, height: size.height)
     }
 }
 
