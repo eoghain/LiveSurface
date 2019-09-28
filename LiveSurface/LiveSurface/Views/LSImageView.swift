@@ -26,7 +26,7 @@ struct LSImageView: View {
             }
             }.onAppear {
                 self.imageLoader.loadImage()
-        }.fixedSize()
+        }
     }
 }
 

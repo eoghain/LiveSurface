@@ -10,10 +10,11 @@ import SwiftUI
 
 struct ImageList: View {
     var images: [LSImage]
+    var size: CGSize = CGSize(width: 400, height: 300)
     
     var body: some View {
         List(self.images) { image in
-            ImageCell(image: image)
+            ImageCell(image: image, size: self.size)
         }
     }
 }

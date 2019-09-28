@@ -115,6 +115,7 @@
 		54213BB7233F0B8E00DF10C2 /* LiveSurface */ = {
 			isa = PBXGroup;
 			children = (
+				54213BFE233FCD4800DF10C2 /* ImageLoader */,
 				54213BF1233F1DA000DF10C2 /* Views */,
 				54213BEE233F1C4A00DF10C2 /* ViewModel */,
 				54213BEB233F166100DF10C2 /* Network */,
@@ -167,8 +168,6 @@
 			isa = PBXGroup;
 			children = (
 				54213BEC233F167700DF10C2 /* Network.swift */,
-				54213BF8233F3CB400DF10C2 /* ImageService.swift */,
-				54213BFA233F3F2800DF10C2 /* ImageLoader.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -190,6 +189,15 @@
 				54213BFC233F404E00DF10C2 /* LSImageView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		54213BFE233FCD4800DF10C2 /* ImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				54213BFA233F3F2800DF10C2 /* ImageLoader.swift */,
+				54213BF8233F3CB400DF10C2 /* ImageService.swift */,
+			);
+			path = ImageLoader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

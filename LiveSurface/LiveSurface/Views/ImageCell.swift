@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ImageCell: View {
     var image: LSImage
+    var size: CGSize = CGSize(width: 400, height: 300)
     
     var body: some View {
         VStack {
@@ -19,6 +20,9 @@ struct ImageCell: View {
                 Text(image.image)
             }
         }
+        .animation(.default)
+        .aspectRatio(0.75, contentMode: .fit)
+        .frame(width: size.width, height: size.height)
     }
 }
 
