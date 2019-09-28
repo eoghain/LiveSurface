@@ -10,11 +10,11 @@ import Foundation
 
 // MARK: - Images
 struct Images: Codable {
-    let images: [String: Image]
+    let images: [String: LSImage]
 }
 
 // MARK: - Image
-struct Image: Codable, Identifiable {
+struct LSImage: Codable, Identifiable {
     let index: Int
     let name: String
     let number: String

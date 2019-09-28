@@ -21,6 +21,8 @@ struct ContentView: View {
                 ImageList(images: self.viewModel.images.images.map({ $1 }))
                     .opacity(self.viewModel.images.images.count == 0 ? 0 : 1)
                 Text("Loading...")
+                    .font(.largeTitle)
+                    .animation(.easeInOut(duration: 0.75))
                     .opacity(self.viewModel.images.images.count == 0 ? 1 : 0)
             }
         }
