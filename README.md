@@ -8,7 +8,7 @@ iPadOS only build because my home machine isn't on Catalina and didn't want to w
 - [X] Fetch images
 - [X] Show images in app
 - [X] Show placeholder images while images download
-- [ ] Scale images based on slider
+- [X] Scale images based on slider
 - [ ] Display images in grid
 - [ ] Refactor API so it's not hardcoded
 - [ ] Refactor APIKey usage
