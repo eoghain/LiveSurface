@@ -13,11 +13,16 @@ struct ContentView: View {
     @ObservedObject var viewModel = ImagesViewModel()
     
     var body: some View {
-        ZStack(alignment: .center) {
-            ImageList(images: self.viewModel.images.images.map({ $1 }))
-                .opacity(self.viewModel.images.images.count == 0 ? 0 : 1)
-            Text("Loading...")
-                .opacity(self.viewModel.images.images.count == 0 ? 1 : 0)
+        VStack {
+            Text("Images")
+                .font(.largeTitle)
+            
+            ZStack(alignment: .center) {
+                ImageList(images: self.viewModel.images.images.map({ $1 }))
+                    .opacity(self.viewModel.images.images.count == 0 ? 0 : 1)
+                Text("Loading...")
+                    .opacity(self.viewModel.images.images.count == 0 ? 1 : 0)
+            }
         }
     }
 }
