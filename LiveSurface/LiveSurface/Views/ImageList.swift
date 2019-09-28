@@ -9,11 +9,12 @@
 import SwiftUI
 
 struct ImageList: View {
-    var images: [LSImage]
+//    var images: [LSImage]
+    var viewModel: ImagesViewModel
     var size: CGSize = CGSize(width: 400, height: 300)
     
     var body: some View {
-        List(self.images) { image in
+        List(self.viewModel.images.images.map({ $1 })) { image in
             ImageCell(image: image, size: self.size)
         }
     }
@@ -27,6 +28,9 @@ struct ImageList_Previews: PreviewProvider {
             LSImage(index: 1, name: "two", number: "two", image: "two.jpg", category: "category", version: "version", tags: Tags(sizedescription: "", sizescale: "", sizewidth: "", sizewidtharc: "", sizeheight: "", sizeheightarc: "", sizedepth: "", sizedeptharc: "", sizeunits: ""))
         ]
         
-        return ImageList(images: images)
+        let viewModel = ImagesViewModel()
+        viewModel.images = Images(images: ["one" : images[0], "two" : images[1]])
+        
+        return ImageList(viewModel: viewModel)
     }
 }

@@ -14,7 +14,7 @@ struct Images: Codable {
 }
 
 // MARK: - Image
-struct LSImage: Codable, Identifiable {
+struct LSImage: Codable, Identifiable, Hashable {
     let index: Int
     let name: String
     let number: String
@@ -25,6 +25,14 @@ struct LSImage: Codable, Identifiable {
     
     // compute id from index for Identifiable conformance
     var id: Int { index }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(index)
+    }
+    
+    static func == (lhs: LSImage, rhs: LSImage) -> Bool {
+        return rhs.index == lhs.index
+    }
 }
 
 // MARK: - Tags

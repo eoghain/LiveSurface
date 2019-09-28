@@ -24,6 +24,9 @@
 		54213BFB233F3F2800DF10C2 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54213BFA233F3F2800DF10C2 /* ImageLoader.swift */; };
 		54213BFD233F404E00DF10C2 /* LSImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54213BFC233F404E00DF10C2 /* LSImageView.swift */; };
 		54213C02233FDC1600DF10C2 /* ImageMetadataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54213C01233FDC1600DF10C2 /* ImageMetadataView.swift */; };
+		54213C05233FE55E00DF10C2 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54213C04233FE55E00DF10C2 /* ArrayExtensions.swift */; };
+		54213C072340128900DF10C2 /* ApplyFilterModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54213C062340128900DF10C2 /* ApplyFilterModalView.swift */; };
+		54213C09234017D100DF10C2 /* FilterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54213C08234017D100DF10C2 /* FilterType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		54213BFA233F3F2800DF10C2 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		54213BFC233F404E00DF10C2 /* LSImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSImageView.swift; sourceTree = "<group>"; };
 		54213C01233FDC1600DF10C2 /* ImageMetadataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMetadataView.swift; sourceTree = "<group>"; };
+		54213C04233FE55E00DF10C2 /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
+		54213C062340128900DF10C2 /* ApplyFilterModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyFilterModalView.swift; sourceTree = "<group>"; };
+		54213C08234017D100DF10C2 /* FilterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,7 @@
 		54213BB7233F0B8E00DF10C2 /* LiveSurface */ = {
 			isa = PBXGroup;
 			children = (
+				54213C03233FE54900DF10C2 /* Extensions */,
 				54213BFE233FCD4800DF10C2 /* ImageLoader */,
 				54213BF1233F1DA000DF10C2 /* Views */,
 				54213BEE233F1C4A00DF10C2 /* ViewModel */,
@@ -162,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				54213BE9233F0C9B00DF10C2 /* Images.swift */,
+				54213C08234017D100DF10C2 /* FilterType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -190,6 +198,7 @@
 				54213BF6233F203000DF10C2 /* ImageList.swift */,
 				54213BFC233F404E00DF10C2 /* LSImageView.swift */,
 				54213C01233FDC1600DF10C2 /* ImageMetadataView.swift */,
+				54213C062340128900DF10C2 /* ApplyFilterModalView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -201,6 +210,14 @@
 				54213BF8233F3CB400DF10C2 /* ImageService.swift */,
 			);
 			path = ImageLoader;
+			sourceTree = "<group>";
+		};
+		54213C03233FE54900DF10C2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				54213C04233FE55E00DF10C2 /* ArrayExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,14 +351,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54213C05233FE55E00DF10C2 /* ArrayExtensions.swift in Sources */,
 				54213BF5233F1DD200DF10C2 /* ImageCell.swift in Sources */,
 				54213BF7233F203000DF10C2 /* ImageList.swift in Sources */,
 				54213BFB233F3F2800DF10C2 /* ImageLoader.swift in Sources */,
 				54213BF9233F3CB400DF10C2 /* ImageService.swift in Sources */,
+				54213C09234017D100DF10C2 /* FilterType.swift in Sources */,
 				54213BF0233F1CB400DF10C2 /* ImagesViewModel.swift in Sources */,
 				54213BED233F167700DF10C2 /* Network.swift in Sources */,
 				54213BB9233F0B8E00DF10C2 /* AppDelegate.swift in Sources */,
 				54213BEA233F0C9B00DF10C2 /* Images.swift in Sources */,
+				54213C072340128900DF10C2 /* ApplyFilterModalView.swift in Sources */,
 				54213BFD233F404E00DF10C2 /* LSImageView.swift in Sources */,
 				54213C02233FDC1600DF10C2 /* ImageMetadataView.swift in Sources */,
 				54213BBB233F0B8E00DF10C2 /* SceneDelegate.swift in Sources */,

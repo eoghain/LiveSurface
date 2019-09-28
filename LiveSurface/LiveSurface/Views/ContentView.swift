@@ -32,7 +32,7 @@ struct ContentView: View {
             .opacity(self.viewModel.images.images.count == 0 ? 0 : 1)
             
             ZStack(alignment: .center) {
-                ImageList(images: self.viewModel.images.images.map({ $1 }), size: CGSize(width: sliderValue, height: sliderValue * 0.75))
+                ImageList(viewModel: self.viewModel, size: CGSize(width: sliderValue, height: sliderValue * 0.75))
                     .opacity(self.viewModel.images.images.count == 0 ? 0 : 1)
                 Text("Loading...")
                     .font(.largeTitle)
