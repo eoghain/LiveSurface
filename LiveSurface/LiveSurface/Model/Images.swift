@@ -7,12 +7,6 @@
 //
 
 import Foundation
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
-//
-//   let images = try? newJSONDecoder().decode(Images.self, from: jsonData)
-
-import Foundation
 
 // MARK: - Images
 struct Images: Codable {
@@ -20,18 +14,17 @@ struct Images: Codable {
 }
 
 // MARK: - Image
-struct Image: Codable {
+struct Image: Codable, Identifiable {
     let index: Int
     let name: String
     let number: String
     let image: String
-    let category: Category
+    let category: String
     let version: String
     let tags: Tags
-}
-
-enum Category: String, Codable {
-    case categoryDefault = "category.default"
+    
+    // compute id from index for Identifiable conformance
+    var id: Int { index }
 }
 
 // MARK: - Tags
